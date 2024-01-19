@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataTable - Mazer Admin Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+              <div class="logo">
+                <a href="index.html"
+                  ><img src="assets/images/logo/logo.png" alt="Logo" srcset=""
+                /></a>
+              </div>
+              <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title">Home</li>
+
+              <li class="sidebar-item">
+                <a href="index.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="sidebar-title">Manage Features</li>
+
+              <li class="sidebar-item">
+                <a href="product.html" class="sidebar-link">
+                  <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                  <span>Product</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="blog.html" class="sidebar-link">
+                  <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="user.html" class="sidebar-link">
+                  <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                  <span>User</span>
+                </a>
+              </li>
+              <li class="sidebar-item active">
+                <a href="transaction.html" class="sidebar-link">
+                  <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                  <span>Transaction</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="sidebar-toggler btn x">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="main">
+        <header class="mb-3">
+          <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+          </a>
+        </header>
+
+        <div class="page-heading">
+          <div class="page-title">
+            <div class="row">
+              <div class="col-12 col-md-6 order-md-1 order-last">
+                <h3>Manage Product</h3>
+              </div>
+              <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav
+                  aria-label="breadcrumb"
+                  class="breadcrumb-header float-start float-lg-end"
+                >
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="index.html">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Manage Product
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <section class="section">
+            <div class="card">
+              <div class="card-body">
+                <table class="table table-striped" id="table1">
+                  <thead>
+                    <tr>
+                      <th>Customer</th>
+                      <th>Product Name</th>
+                      <th>Product Photo</th>
+                      <th>Quantity</th>
+                      <th>Total Price</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Alberto Rodriguez</td>
+                      <td>Nordhic Chair</td>
+                      <td>
+                        <img
+                          src="../images/product-1.png"
+                          style="height: 70px"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </td>
+                      <td>2 pcs</td>
+                      <td>Rp276.000,00</td>
+                      <td>
+                        <span class="badge bg-success">Success</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Daisuke Sato</td>
+                      <td>Kruzo Aero Chair</td>
+                      <td>
+                        <img
+                          src="../images/product-2.png"
+                          style="height: 70px"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </td>
+                      <td>1 pcs</td>
+                      <td>Rp145.000,00</td>
+                      <td>
+                        <span class="badge bg-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Kevin Mendoza</td>
+                      <td>Ergonomic Chair</td>
+                      <td>
+                        <img
+                          src="../images/product-3.png"
+                          style="height: 70px"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </td>
+                      <td>10 pcs</td>
+                      <td>Rp1.245.000,00</td>
+                      <td>
+                        <span class="badge bg-danger">Failed</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script>
+      // Simple Datatable
+      let table1 = document.querySelector("#table1");
+      let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
